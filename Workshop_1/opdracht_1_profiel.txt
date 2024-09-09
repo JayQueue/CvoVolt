@@ -1,0 +1,1 @@
+{'voornaam': 'Jonathan', 'naam': 'Quartier', 'leeftijd': 46, 'woonplaats': 'Kortrijk', 'beroep': 'Data miner'}

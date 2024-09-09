@@ -2,15 +2,19 @@
 Auteur: Jonathan Quartier
 Datum: 9/9/2024
 Workshop 1: Opdracht 1
+GitHub: https://github.com/JayQueue/CvoVolt/blob/main/Workshop_1/opdracht_1.py 
 """
 def make_profile(vnaam: str, naam: str, minimum_extra_info=3, **extra_info):
+    # Maakt nieuw profiel aan met standaard voornaam en naam
+    # en minimum 3 extra informatievelden
     if len(extra_info) >= minimum_extra_info:
-        profile = {
+        return {
             'voornaam': vnaam,
-            'naam': naam
+            'naam': naam,
+            **extra_info
         }
-        profile.update(extra_info)
-        return profile
+        #profile.update(extra_info)
+        #return profile
     else:
         return f"Geef minstens {minimum_extra_info} andere gegevens."
 
