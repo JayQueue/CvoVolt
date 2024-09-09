@@ -1,2 +1,0 @@
-print("Oefening 1")
-
