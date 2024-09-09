@@ -15,10 +15,13 @@ def make_profile(vnaam: str, naam: str, minimum_extra_info=3, **extra_info):
         return f"Geef minstens {minimum_extra_info} andere gegevens."
 
 def write_file(filename: str, data: str):
-    with open(filename, 'w') as file:
-        file.write(str(data))
+    with open(filename, 'a') as file:
+        file.write(str(data) + '\n')
 
-profile = make_profile('Jonathan', 'Quartier', leeftijd=46, woonplaats='Kortrijk')
+# Ok profiel
+profile = make_profile('Jonathan', 'Quartier', leeftijd=46, woonplaats='Kortrijk', beroep="Data miner")
+# Nok profiel
+#profile = make_profile('Jonathan', 'Quartier', leeftijd=45, woonplaats='Kortrijk')
 
 print(profile)
-write_file('profiel.txt', profile)
+write_file('opdracht_1_profiel.txt', profile)
