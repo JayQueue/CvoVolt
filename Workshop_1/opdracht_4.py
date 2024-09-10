@@ -7,15 +7,16 @@ GitHub: https://github.com/JayQueue/CvoVolt/blob/main/Workshop_1/opdracht_4.py
 import opdracht_4_module as geometrie
 
 menu = [
-    "1. Oppervlakte van een rechthoek",
-    "2. Omtrek van een rechthoek",
-    "3. Omtrek van een cirkel",
-    "4. Oppervlakte van een vierkant"
+    "Oppervlakte van een rechthoek",
+    "Omtrek van een rechthoek",
+    "Omtrek van een cirkel",
+    "Oppervlakte van een vierkant"
+    "Stoppen"
 ]
 
 def toon_menu():
-    for menuitem in menu:
-        print(menuitem)
+    for i, menuitem in enumerate(menu, 1):
+        print(f"{i} - {menuitem}")
 
 def main():
     while True:
@@ -51,6 +52,8 @@ def main():
 
             case _:
                 print("Ongeldige keuze. Probeer het opnieuw.")
+
+        print("\n")
 
 if __name__ == "__main__":
     main()
