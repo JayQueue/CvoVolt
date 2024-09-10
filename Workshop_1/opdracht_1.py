@@ -13,8 +13,6 @@ def make_profile(vnaam: str, naam: str, minimum_extra_info=3, **extra_info):
             'naam': naam,
             **extra_info
         }
-        #profile.update(extra_info)
-        #return profile
     else:
         return f"Geef minstens {minimum_extra_info} andere gegevens."
 
@@ -24,8 +22,8 @@ def write_file(filename: str, data: str):
 
 # Ok profiel
 profile = make_profile('Jonathan', 'Quartier', leeftijd=46, woonplaats='Kortrijk', beroep="Data miner")
-# Nok profiel
+# Nok profiel - uncomment for test
 #profile = make_profile('Jonathan', 'Quartier', leeftijd=45, woonplaats='Kortrijk')
-
-print(profile)
+# Uncomment for output to screen
+#print(profile)
 write_file('opdracht_1_profiel.txt', profile)
