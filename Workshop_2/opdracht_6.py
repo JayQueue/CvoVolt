@@ -11,19 +11,28 @@ class AutoVerhuur:
         self.brandstof = brandstof
         self.verhuurd = verhuurd
 
-    def printMerkTypeBrandstof(self):
+    def print_info(self):
         print(f"{self.merk} {self.type} {self.brandstof}.")
 
-    def isVerhuurd(self):
+    def is_verhuurd(self):
         if self.verhuurd:
             print("Deze auto is al verhuurd.")
         else:
             print("Deze auto is nog niet verhuurd.")
 
 toyota = AutoVerhuur("Toyota", "Yaris", "Benzine", False)
-toyota.printMerkTypeBrandstof()
-toyota.isVerhuurd()
+toyota.print_info()
+toyota.is_verhuurd()
 
 nissan = AutoVerhuur("Nissan", "VanEenBepaaldType", "LPG", True)
-nissan.printMerkTypeBrandstof()
-nissan.isVerhuurd()
+nissan.print_info()
+nissan.is_verhuurd()
+
+bmw = AutoVerhuur("BMW", "Ik ken daar niet van", "Diesel", False)
+bmw.print_info()
+bmw.is_verhuurd()
+
+citroen = AutoVerhuur("Citroen", "WeetIkVeel", "Benzine", True)
+citroen.print_info()
+citroen.is_verhuurd()
+
